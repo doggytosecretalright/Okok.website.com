@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Home Page</h1>
+    </header>
+    <main>
+        <h1>Welcome to Our Christian-Themed Website</h1>
+         <p>Thank you for visiting our website, where we explore the Christian faith and provide evidence for God's existence. Our goal is to provide a resource for those seeking to deepen their understanding of Christianity and to address common objections raised by Muslim apologists.</p> 
+         <p>On our website, you'll find pages dedicated to refuting Muslim arguments against Christianity, as well as evidence for God's existence from various perspectives, including philosophical, scientific, and historical. We also provide resources for further study and engagement with the Christian faith.</p> 
+         <p>We invite you to explore our website and join the conversation. Whether you're a Christian looking to deepen your faith, a Muslim seeking to understand Christianity better, or simply someone interested in learning more about religion and belief, we hope you'll find our website informative and engaging.</p> 
+         <p>Thank you again for visiting, and we look forward to hearing from you!</p>
+        <ul>
+            <li><a href="about.html" target="_blank">About</a></li>
+            <li><a href="contact.html" target="_blank">Contact</a></li>
+            <li><a href="index.html" target="_blank">Main</a></li>
+            <li><a href="proof.html" target="_blank">proof for god</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
+    <script src="home.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    transition: background-position 0.5s ease;
+  }
+  
+  header {
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #003366;
+    background-image: url('header-background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  main {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  main p {
+    border: 2px solid #0066cc;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    padding-left: 30px;
+    background-image: linear-gradient(to right, #f9f9f9 50%, #e0e0e0 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease;
+  }
+  
+  main p:hover {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background-position: left bottom;
+  }
+  
+  main p::first-letter {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0066cc;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  main p a {
+    text-decoration: none;
+    color: #0066cc;
+    transition: color 0.3s ease;
+  }
+  
+  main p a:hover {
+    text-decoration: underline;
+    color: #003366;
+  }
+  
+  footer {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  ul li {
+    margin: 0 10px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  
+  ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #003366;
+  }
+  .grey-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .box {
+    background-image: linear-gradient(to bottom, #f2f2f2, #e5e5e5);
+    background-size: 100% 200px;
+    background-position: 0% 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: skewX(-20deg);
+    z-index: -1;
+  }
+  
+  .box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .box li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .box a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  .box a:hover {
+    text-decoration: underline;
+  }
+  
+  .box p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .box:hover {
+    background-color: #e5e5e5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }

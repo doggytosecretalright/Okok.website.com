@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="contact.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="proof.html">Proof for God</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <button id="show-popup">Show Contact Form</button>
+    <div id="popup-form-container" style="display:none;">
+      <form id="contact-form">
+        <div class="form-row">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" class="form-input" required></textarea>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LdyVM0pAAAAAKVJKyw7n7PVCJgp-uJTUR_J9Uga"></div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </main>
+  <script>
+    function showPopupForm() {
+      document.getElementById("popup-form-container").style.display = "block";
+    }
+
+    function hidePopupForm() {
+      document.getElementById("popup-form-container").style.display = "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById('show-popup').addEventListener('click', () => {
+        showPopupForm();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') hidePopupForm()
+      });
+
+      document.getElementById("contact-form").addEventListener("submit", (event) => {
+        const contactForm = event.target
+        if (!validateContactForm(contactForm)) {
+          event.preventDefault();
+          displayError(contactForm, 'Invalid input')
+        }
+      });
+    });
+
+    function validateContactForm(contactForm) {
+      let isValid = true;
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const message = contactForm.message.value.trim();
+
+      if (!name || !email || !message) {
+        isValid = false;
+      } else if (!isValidEmail(email)) {
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    function isValidEmail(email) {
+
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+      
+      return emailRegex.test(email);
+    }
+
+    function displayError(form, message) {
+
+  const error = document.createElement('div');
+  error.classList.add('error');
+  error.textContent = message;
+
+  form.appendChild(error);
+
+  error.scrollIntoView({ behavior: 'smooth' });
+
+  setTimeout(() => {
+    error.remove();
+  }, 3000);
+}
+  </script>
+</body>
+</html>
